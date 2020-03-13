@@ -30,6 +30,9 @@ environment:
       ARGS: --toolset=msvc-14.1 address-model=32
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
       ARGS: --toolset=msvc-14.1 address-model=64 cxxflags=-std:c++latest
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+      ARGS: --toolset=msvc-14.2 address-model=64,32 cxxstd=,17,2a
+    - ARGS: --toolset=clang-win address-model=64,32 cxxstd=03,11,14,17,2a
     - ARGS: --toolset=gcc address-model=64
       PATH: C:\mingw-w64\x86_64-6.3.0-posix-seh-rt_v5-rev1\mingw64\bin;%PATH%
     - ARGS: --toolset=gcc address-model=64 cxxflags=-std=gnu++1z
